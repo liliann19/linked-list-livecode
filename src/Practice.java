@@ -1,17 +1,43 @@
 public class Practice {
     public static void main(String[] args) {
-        Node head = new Node('g', null);
-        Node ryan = new Node('s', null);
-        head.next = ryan;
-        ryan.next = new Node('t', null);
-        ryan.next.next = new Node('x', null);
+        // Node head = new Node('g', null);
+        // Node ryan = new Node('s', null);
+        // head.next = ryan;
+        // ryan.next = new Node('t', null);
+        // ryan.next.next = new Node('x', null);
 
-        // Expect to print true
-        System.out.println(contains(head, 'x'));
-        //Expect to print false
-        System.out.println(contains(head, 'e'));
+        // // Expect to print true
+        // System.out.println(contains(head, 'x'));
+        // //Expect to print false
+        // System.out.println(contains(head, 'e'));
 
-        remove(head,'t');
+        // remove(head,'t');
+
+        MyLL<Character> list = new MyLL<>();
+        list.addToBack('x');
+        list.addToBack('m');
+        list.addToBack('v');
+        list.addToBack('q');
+
+        list.printList();
+
+        MyLL<Integer> intList = new MyLL<>();
+        intList.addToBack(5);
+        intList.addToBack(99);
+        intList.addToBack(2);
+        intList.addToBack(-33333);
+        intList.addToBack(66);
+
+        intList.printList();
+
+        MyLL<Integer> doubleIntList = new MyLL<>();
+        doubleIntList.addToBack(1);
+        doubleIntList.addToBack(2);
+        doubleIntList.addToBack(3);
+        doubleIntList.addToBack(4);
+        
+        doubleIntList.printBackwards();
+
     }
 
     public static void printList(Node start) {
